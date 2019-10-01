@@ -17,7 +17,7 @@ namespace Controller.Menu
             _first = default;
             _firstInserted = true;
         }
-        public void Add(object child)
+        public virtual void Add(object child)
         {
             if (child is null || child == this)
             {
@@ -43,15 +43,15 @@ namespace Controller.Menu
 
         public virtual void ChangedChild(object? previous, object next, object? param = null) { }
 
-        public void Close()
+        public virtual void Close()
         {
-            AsStream().ForEach(c =>
+            foreach(object c in AsStream())
             {
                 if (c is IMenuSelection)
                 {
-
+                    (c as IMenuSelection)?.Close();
                 }
-            });
+            };
         }
 
         public bool Contains(Type possibleChild)
