@@ -6,16 +6,27 @@ using System.Text;
 
 namespace Game.Controller.Menu
 {
+    /// <summary>
+    /// Menu selection for the intro of the game
+    /// </summary>
     class IntroMenuSelection : InputMenu
     {
         private readonly SubMenuIntro intro;
         private readonly IGameIntroView giv;
+        /// <summary>
+        /// Initialize with the default sub menu.
+        /// </summary>
         public IntroMenuSelection()
         {
             intro = new SubMenuIntro(this);
             Add(intro);
             giv = new GameIntroViewImpl();
         }
+        /// <summary>
+        /// Initialize with a custom sub menu and a view member
+        /// </summary>
+        /// <param name="intro">The sub menu for the intro</param>
+        /// <param name="giv">The view member used for visual effect.</param>
         public IntroMenuSelection(SubMenuIntro intro, GameIntroViewImpl giv)
         {
             this.intro = intro;

@@ -5,6 +5,9 @@ using Game.View.Interfaces;
 
 namespace Game.View.Implementation
 {
+    /// <summary>
+    /// Empty implementation.
+    /// </summary>
     class SubMenuIntroViewImpl : ISubMenuIntroView
     {
         public void Clean()

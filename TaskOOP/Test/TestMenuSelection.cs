@@ -113,7 +113,7 @@ namespace Test
             {
                 Assert.Fail(e.Message);
             }
-            Assert.ThrowsException<Exception>(() => r.Add(""));
+            Assert.ThrowsException<ArgumentException>(() => r.Add(""));
         }
     }
 }

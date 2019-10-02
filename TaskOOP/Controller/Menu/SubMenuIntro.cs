@@ -6,6 +6,9 @@ using Game.View.Interfaces;
 
 namespace Game.Controller.Menu
 {
+    /// <summary>
+    /// Sub menu for the intro.
+    /// </summary>
     internal class SubMenuIntro : SubMenu
     {
         private readonly ISubMenuIntroView smv;
