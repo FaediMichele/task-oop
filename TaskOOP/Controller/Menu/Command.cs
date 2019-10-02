@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Controller.Menu
+namespace Game
 {
     public enum Command
     {

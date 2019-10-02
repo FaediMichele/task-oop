@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Controller.Menu
+namespace Game.Controller.Menu
 {
     class IntroMenuSelection : InputMenu
     {
@@ -15,6 +15,12 @@ namespace Controller.Menu
             intro = new SubMenuIntro(this);
             Add(intro);
             giv = new GameIntroViewImpl();
+        }
+        public IntroMenuSelection(SubMenuIntro intro, GameIntroViewImpl giv)
+        {
+            this.intro = intro;
+            Add(intro);
+            this.giv = giv;
         }
         public override void Input(ISet<Command> commands)
         {

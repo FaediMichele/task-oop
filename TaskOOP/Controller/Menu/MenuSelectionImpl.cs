@@ -1,10 +1,10 @@
-﻿using Controller.Menu;
+﻿using Game.Controller.Menu;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Controller.Menu
+namespace Game.Controller.Menu
 {
     public class MenuSelectionImpl : IMenuSelection
     {

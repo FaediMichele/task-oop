@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Controller.Menu
+namespace Game.Controller.Menu
 {
     class InputMenu : MenuSelectionImpl
     {

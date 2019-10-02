@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Controller.Menu
+namespace Game.Controller.Menu
 {
     /// <summary>
     /// Selection of child with the same base type.

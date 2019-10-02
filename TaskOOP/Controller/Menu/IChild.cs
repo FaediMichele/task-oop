@@ -1,9 +1,9 @@
-﻿using Controller.Menu;
+﻿using Game.Controller.Menu;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Controller.Menu
+namespace Game.Controller.Menu
 {
     /// <summary>
     /// Child of the IMenuSelection

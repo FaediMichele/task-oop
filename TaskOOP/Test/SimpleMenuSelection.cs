@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Controller.Menu;
+using Game.Controller.Menu;
 
 namespace Test
 {

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Controller.Menu
+namespace Game.Controller.Menu
 {
     /// <summary>
     /// The SubMenu have different behavior based on their implementation.

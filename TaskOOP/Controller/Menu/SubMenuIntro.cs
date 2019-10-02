@@ -4,7 +4,7 @@ using System.Text;
 using Controller.View.Implementation;
 using Controller.View.Interfaces;
 
-namespace Controller.Menu
+namespace Game.Controller.Menu
 {
     internal class SubMenuIntro : SubMenu
     {
@@ -12,6 +12,10 @@ namespace Controller.Menu
         public SubMenuIntro(IMenuSelection selection) : base(selection)
         {
             smv = new SubMenuIntroViewImpl();
+        }
+        public SubMenuIntro(IMenuSelection selection, SubMenuIntroViewImpl smv) : base(selection)
+        {
+            this.smv = smv;
         }
         public override void SelectChild()
         {
