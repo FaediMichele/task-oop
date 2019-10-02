@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Game.Controller.Menu
 {
-    class InputMenu : MenuSelectionImpl
+    public class InputMenu : MenuSelectionImpl
     {
         public virtual void Input(ISet<Command> commands)
         {

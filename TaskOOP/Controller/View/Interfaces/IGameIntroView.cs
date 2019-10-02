@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Controller.View.Interfaces
+namespace Game.View.Interfaces
 {
     /// <summary>
     /// Interface for the game intro view.

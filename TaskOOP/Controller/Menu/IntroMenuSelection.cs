@@ -1,5 +1,5 @@
-﻿using Controller.View.Implementation;
-using Controller.View.Interfaces;
+﻿using Game.View.Implementation;
+using Game.View.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;

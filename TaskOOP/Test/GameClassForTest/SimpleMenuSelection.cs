@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using Game.Controller.Menu;
 
-namespace Test
+namespace Test.GameClassForTest
 {
     class SimpleMenuSelection : MenuSelectionImpl
     {
-        public delegate void Use();
+        
         private readonly Use _changeChild;
         private readonly Use _fatherChanged;
         public SimpleMenuSelection(Use changeChild, Use fatherChanged)

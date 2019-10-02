@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Controller.View.Interfaces;
+using Game.View.Interfaces;
 
-namespace Controller.View.Implementation
+namespace Game.View.Implementation
 {
     class SubMenuIntroViewImpl : ISubMenuIntroView
     {

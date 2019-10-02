@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Controller.View.Implementation;
-using Controller.View.Interfaces;
+using Game.View.Implementation;
+using Game.View.Interfaces;
 
 namespace Game.Controller.Menu
 {

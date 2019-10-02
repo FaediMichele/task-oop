@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Controller.View.Interfaces
+namespace Game.View.Interfaces
 {
     /// <summary>
     /// Interface for sub menu that interact directly with the window
     /// </summary>
-    interface ISubMenuView
+    public interface ISubMenuView
     {
         /// <summary>
         /// Get the object that contains the sub menu ui element

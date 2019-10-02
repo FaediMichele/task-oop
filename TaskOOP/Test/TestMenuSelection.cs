@@ -4,6 +4,7 @@ using Xunit;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Test.GameClassForTest;
 
 namespace Test
 {
@@ -98,6 +99,21 @@ namespace Test
             Assert.IsTrue(l1.Contains(s));
             Assert.IsFalse(l1.Contains(sub));
             Assert.AreEqual(l1.Count, 2);
+        }
+        [TestMethod]
+        public void Test_Root()
+        {
+            Root<Double> r = new Root<Double>();
+            try
+            {
+                r.Add(new Double());
+                Assert.IsTrue(true);
+            }
+            catch(Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+            Assert.ThrowsException<Exception>(() => r.Add(""));
         }
     }
 }

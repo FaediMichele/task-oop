@@ -1,4 +1,4 @@
-﻿using Controller.View.Interfaces;
+﻿using Game.View.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +11,7 @@ namespace Game.Controller.Menu
     /// The behavior of the method may change a lot base on the implementation.
     /// Represent a controller for a page of the menu.
     /// </summary>
-    abstract class SubMenu : IChild
+    public abstract class SubMenu : IChild
     {
         private readonly IMenuSelection _ms;
         /// <summary>

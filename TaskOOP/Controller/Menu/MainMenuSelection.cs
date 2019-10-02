@@ -1,6 +1,6 @@
 ﻿namespace Game.Controller.Menu
 {
-    internal class MainMenuSelection
+    internal class MainMenuSelection : InputMenu
     {
     }
 }

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Controller.View.Interfaces
+namespace Game.View.Interfaces
 {
     /// <summary>
     /// Interface for the SubMenu for the intro.
     /// </summary>
-    interface ISubMenuIntroView : ISubMenuView
+    public interface ISubMenuIntroView : ISubMenuView
     {
         /// <summary>
         /// Play the intro.

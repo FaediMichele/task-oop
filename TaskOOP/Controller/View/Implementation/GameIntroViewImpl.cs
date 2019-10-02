@@ -1,9 +1,9 @@
-﻿using Controller.View.Interfaces;
+﻿using Game.View.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Controller.View.Implementation
+namespace Game.View.Implementation
 {
     class GameIntroViewImpl : IGameIntroView
     {
