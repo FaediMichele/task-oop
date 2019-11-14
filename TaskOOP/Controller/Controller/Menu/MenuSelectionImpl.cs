@@ -55,7 +55,7 @@ namespace Game.Controller.Menu
         /// Get a list of child.
         /// </summary>
         /// <returns>A list.</returns>
-        public List<object> AsStream()
+        public List<object> ToList()
         {
             return _children.Values.ToList();
         }
@@ -73,7 +73,7 @@ namespace Game.Controller.Menu
         /// </summary>
         public virtual void Close()
         {
-            foreach(object c in AsStream())
+            foreach(object c in ToList())
             {
                 if (c is IMenuSelection)
                 {

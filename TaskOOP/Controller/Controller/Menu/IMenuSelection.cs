@@ -18,7 +18,7 @@ namespace Game.Controller.Menu
         /// <returns>
         /// A list of child.
         /// </returns>
-        List<object> AsStream();
+        List<object> ToList();
         /// <summary>
         /// Get the MenuSelection that contains this.
         /// If present.

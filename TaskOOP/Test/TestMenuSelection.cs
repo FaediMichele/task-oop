@@ -8,40 +8,61 @@ using Test.GameClassForTest;
 
 namespace Test
 {
+    /// <summary>
+    /// Test the MenuSelectionImpl.
+    /// This tests is not made for the Simple~ classes: they're purpose is only for test.
+    /// </summary>
     [TestClass]
     public class TestMenuSelection
     {
         private const String STRING = "AAAA";
+
+        /// <summary>
+        /// Test if the menu correctly add a child a contains it.
+        /// </summary>
         [TestMethod]
         public void Test_CreateChildAndContainsChild()
         {
-            MenuSelectionImpl menu = new MenuSelectionImpl();
+            IMenuSelection menu = new MenuSelectionImpl();
             new SimpleChild(menu);
             Assert.IsTrue(menu.Contains(typeof(SimpleChild)));
         }
+
+        /// <summary>
+        /// Test if the menu not contains another child.
+        /// </summary>
         [TestMethod]
         public void Test_DontContainsChild()
         {
-            MenuSelectionImpl menu = new MenuSelectionImpl();
+            IMenuSelection menu = new MenuSelectionImpl();
             new SimpleChild(menu);
             Assert.IsTrue(!menu.Contains(typeof(MenuSelectionImpl)));
         }
+
+        /// <summary>
+        /// Test adding simple class to the menu.
+        /// </summary>
+        [TestMethod]
         public void Test_Add()
         {
-            MenuSelectionImpl menu = new MenuSelectionImpl();
+            IMenuSelection menu = new MenuSelectionImpl();
             menu.Add(new Double());
             menu.Add(new String(""));
             Assert.IsTrue(menu.Contains(typeof(Double)));
             Assert.IsTrue(menu.Contains(typeof(String)));
             Assert.IsTrue(!menu.Contains(typeof(Decimal)));
         }
+
+        /// <summary>
+        /// Test if a menu correctly add, contains, select, remove a child that is the same o another type of the father.
+        /// </summary>
         [TestMethod]
         public void Test_Recursive()
         {
             bool changeChild = false;
             bool changeFather = false;
-            SimpleMenuSelection menu = new SimpleMenuSelection(() => changeChild = true, ()=> { });
-            SimpleMenuSelection submenu = new SimpleMenuSelection(()=> { }, () => changeFather=true);
+            IMenuSelection menu = new SimpleMenuSelection(() => changeChild = true, ()=> { });
+            IMenuSelection submenu = new SimpleMenuSelection(()=> { }, () => changeFather=true);
 
             // test set of sub menu's father
             menu.Add(submenu);
@@ -68,13 +89,16 @@ namespace Test
             Assert.IsTrue(changeFather);
         }
 
+        /// <summary>
+        /// Test of the method ToList that return a list of child.
+        /// </summary>
         [TestMethod]
-        public void Test_AsStream()
+        public void Test_ToList()
         {
-            MenuSelectionImpl menu = new MenuSelectionImpl();
+            IMenuSelection menu = new MenuSelectionImpl();
             Double d = new Double();
             String s = new String(STRING);
-            MenuSelectionImpl sub = new MenuSelectionImpl();
+            IMenuSelection sub = new MenuSelectionImpl();
             menu.Add(d);
             menu.Add(s);
             menu.Add(sub);
@@ -85,7 +109,7 @@ namespace Test
             Assert.IsTrue(menu.Contains(sub.GetType()));
 
             // Test List
-            List<object> l = menu.AsStream();
+            List<object> l = menu.ToList();
             Trace.WriteLine(l.ToString());
             Assert.IsTrue(l.Contains(d));
             Assert.IsTrue(l.Contains(s));
@@ -94,12 +118,16 @@ namespace Test
 
             // Test removed item
             menu.Remove(typeof(MenuSelectionImpl));
-            List<object> l1 = menu.AsStream();
+            List<object> l1 = menu.ToList();
             Assert.IsTrue(l1.Contains(d));
             Assert.IsTrue(l1.Contains(s));
             Assert.IsFalse(l1.Contains(sub));
             Assert.AreEqual(l1.Count, 2);
         }
+
+        /// <summary>
+        /// Test the add function of the Root
+        /// </summary>
         [TestMethod]
         public void Test_Root()
         {

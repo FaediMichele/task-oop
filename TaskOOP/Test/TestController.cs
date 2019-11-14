@@ -9,6 +9,10 @@ using Test.GameClassForTest;
 
 namespace Test
 {
+    /// <summary>
+    /// Test of the controller.
+    /// For OOP: I put here all the test for the controller except for the MenuSelection that has his test class.
+    /// </summary>
     [TestClass]
     public class TestController
     {
@@ -20,8 +24,8 @@ namespace Test
         }
 
         /// <summary>
-        /// Test for the Enty point use the root correctly.
-        /// Test the the input commands, the change of the MenuSelection, and the Sub menu is passed correctly
+        /// Test the enty point that use the root correctly.
+        /// Test the input commands, the change of the MenuSelection, and if the Sub menu is passed correctly.
         /// </summary>
         [TestMethod]
         public void TestEntryPoint()

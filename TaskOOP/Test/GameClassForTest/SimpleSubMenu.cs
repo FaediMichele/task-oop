@@ -7,6 +7,9 @@ using Game;
 
 namespace Test.GameClassForTest
 {
+    /// <summary>
+    /// This class is used for test purpose. Can be used to see a simple implementation of it.
+    /// </summary>
     public class SimpleSubMenu : SimpleSubMenu<object> 
     {
         public SimpleSubMenu(IMenuSelection ms, Use getView, Use selectChild, Use unselectChild)

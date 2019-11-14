@@ -18,7 +18,7 @@ namespace Game.Controller.Menu
         /// <param name="commands"></param>
         public virtual void Input(ISet<Command> commands)
         {
-            foreach(InputMenu i in (from c in AsStream()
+            foreach(InputMenu i in (from c in ToList()
                                     where c is InputMenu
                                     select c as InputMenu))
             {
